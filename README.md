@@ -34,7 +34,7 @@ repositories {
 [![Maven Central](https://img.shields.io/maven-central/v/at.asitplus.wallet/idacredential)](https://mvnrepository.com/artifact/at.asitplus.wallet/idacredential/)
 
 Use data provided by ID Austria as a W3C VC, or ISO 18013-5 Credential.  
-Be sure to call `at.asitplus.wallet.idaustria.Initializer.initWithVcLib` first thing in your application.
+Be sure to call `at.asitplus.wallet.idaustria.Initializer.initWithVCK` first thing in your application.
 
 Implemented attributes are:
 
@@ -142,7 +142,7 @@ See [PID Rule Book](https://github.com/eu-digital-identity-wallet/eudi-doc-archi
 [![Maven Central](https://img.shields.io/maven-central/v/at.asitplus.wallet/powerofrepresentation)](https://mvnrepository.com/artifact/at.asitplus.wallet/powerofrepresentation/)
 
 Data classes representing power of representations, as a SD JWT Credential.  
-Be sure to call `at.asitplus.wallet.por.Initializer.initWithVcLib` first thing in your application.
+Be sure to call `at.asitplus.wallet.por.Initializer.initWithVCK` first thing in your application.
 
 ---
 
@@ -151,7 +151,7 @@ Be sure to call `at.asitplus.wallet.por.Initializer.initWithVcLib` first thing i
 [![Maven Central](https://img.shields.io/maven-central/v/at.asitplus.wallet/certificateofresidence)](https://mvnrepository.com/artifact/at.asitplus.wallet/certificateofresidence/)
 
 Data classes representing certificate of residences, as a SD JWT Credential.  
-Be sure to call `at.asitplus.wallet.cor.Initializer.initWithVcLib` first thing in your application.
+Be sure to call `at.asitplus.wallet.cor.Initializer.initWithVCK` first thing in your application.
 
 
 
