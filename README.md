@@ -15,7 +15,7 @@
 This repository contains a collection of all available verifiable credentials powered by the A-SIT Plus [VC-K](https://github.com/a-sit-plus/vck) Verifiable Credentials Library for Kotlin Multiplatform.
 The credentials themselves each live in their own repository and are developed independently of each other without any cross-dependencies.
 Hence, it is possible to use only a single one in a project or combine as many as desired.  
-**Do check the representation format in the description of each credential!** Not every credential supports every representation, even if the the KMM VC Library supports all of the following formats:
+**Do check the representation format in the description of each credential!** Not every credential supports every representation, even if the the VC-K Library supports all of the following formats:
 
 - [W3C VC Data Model:](https://w3c.github.io/vc-data-model/)
 	- [Plain JWT](https://www.w3.org/TR/vc-data-model/#json-web-token) (with simple ECDSA signatures)
