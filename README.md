@@ -160,6 +160,16 @@ Data classes representing certificate of residences, as a SD JWT Credential.
 Be sure to call `at.asitplus.wallet.cor.Initializer.initWithVCK` first thing in your application.
 
 
+---
+
+### [ePrescription](https://github.com/a-sit-plus/eprescription-credential)
+
+[![Maven Central](https://img.shields.io/maven-central/v/at.asitplus.wallet/eprescription)](https://mvnrepository.com/artifact/at.asitplus.wallet/eprescription/)
+
+
+Data classes representing OTT for ePrescription, as a SD JWT Credential.  
+Be sure to call `at.asitplus.wallet.eprescription.Initializer.initWithVCK` first thing in your application.
+
 
 <br>
 
