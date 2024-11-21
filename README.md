@@ -171,6 +171,17 @@ Data classes representing OTT for ePrescription, as a SD JWT Credential.
 Be sure to call `at.asitplus.wallet.eprescription.Initializer.initWithVCK` first thing in your application.
 
 
+---
+
+### [Company Registration](https://github.com/a-sit-plus/company-registration-credential)
+
+[![Maven Central](https://img.shields.io/maven-central/v/at.asitplus.wallet/companyregistration)](https://mvnrepository.com/artifact/at.asitplus.wallet/companyregistration/)
+
+Data classes representing company registrations, as a SD JWT Credential, with the help
+of [VC-K](https://github.com/a-sit-plus/vck).
+
+Be sure to call `at.asitplus.wallet.companyregistration.Initializer.initWithVCK` first thing in your application.
+
 <br>
 
 ---
