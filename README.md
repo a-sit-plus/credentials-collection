@@ -175,7 +175,7 @@ Be sure to call `at.asitplus.wallet.eprescription.Initializer.initWithVCK` first
 
 ### [Company Registration](https://github.com/a-sit-plus/company-registration-credential)
 
-[![Maven Central](https://img.shields.io/maven-central/v/at.asitplus.wallet/companyregistration)](https://mvnrepository.com/artifact/at.asitplus.wallet/companyregistration/)
+[![Maven Central](https://img.shields.io/maven-central/v/at.asitplus.wallet/company-registration)](https://mvnrepository.com/artifact/at.asitplus.wallet/company-registration/)
 
 Data classes representing company registrations, as a SD JWT Credential, with the help
 of [VC-K](https://github.com/a-sit-plus/vck).
