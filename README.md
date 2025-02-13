@@ -182,6 +182,19 @@ of [VC-K](https://github.com/a-sit-plus/vck).
 
 Be sure to call `at.asitplus.wallet.companyregistration.Initializer.initWithVCK` first thing in your application.
 
+
+
+---
+
+### [Tax ID Credential](https://github.com/a-sit-plus/tax-id-credential)
+
+[![Maven Central](https://img.shields.io/maven-central/v/at.asitplus.wallet/taxid)](https://mvnrepository.com/artifact/at.asitplus.wallet/taxid/)
+
+Data representing tax credentials as SD-JWT, with the help
+of [VC-K](https://github.com/a-sit-plus/vck).
+
+Be sure to call `at.asitplus.wallet.taxid.Initializer.initWithVCK` first thing in your application.
+
 <br>
 
 ---
