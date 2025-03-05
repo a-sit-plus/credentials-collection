@@ -162,13 +162,15 @@ Be sure to call `at.asitplus.wallet.cor.Initializer.initWithVCK` first thing in 
 
 ---
 
-### [ePrescription](https://github.com/a-sit-plus/eprescription-credential)
+### [Health ID Attestation](https://github.com/a-sit-plus/healthid)
 
-[![Maven Central](https://img.shields.io/maven-central/v/at.asitplus.wallet/eprescription)](https://mvnrepository.com/artifact/at.asitplus.wallet/eprescription/)
+[![Maven Central](https://img.shields.io/maven-central/v/at.asitplus.wallet/healthid)](https://mvnrepository.com/artifact/at.asitplus.wallet/healthid/)
 
 
-Data classes representing OTT for ePrescription, as a SD JWT Credential.  
-Be sure to call `at.asitplus.wallet.eprescription.Initializer.initWithVCK` first thing in your application.
+Data classes representing a Health ID Attestation, as a SD-JWT credential, with the help of 
+[VC-K](https://github.com/a-sit-plus/vck).
+
+Be sure to call `at.asitplus.wallet.healthid.Initializer.initWithVCK` first thing in your application.
 
 
 ---
