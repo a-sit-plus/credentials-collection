@@ -107,23 +107,34 @@ These attributes are implemented:
 
 [![Maven Central](https://img.shields.io/maven-central/v/at.asitplus.wallet/eupidcredential)](https://mvnrepository.com/artifact/at.asitplus.wallet/eupidcredential/)
 
-Use data provided by EU Wallets as a W3C VC, or ISO 18013-5 Credential.  
-Be sure to call `at.asitplus.wallet.eupid.Initializer.initWithVCK` first thing in your application.
+Use data provided by EU Wallets as an ISO 18013-5 Credential.  
+Be sure to call `at.asitplus.wallet.eupid.Initializer.initWithVCK()` first thing in your application.
 
-See [PID Rule Book](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/blob/main/docs/annexes/annex-06-pid-rulebook.md) for a list of attributes. These are implemented:
+See [ARF PID Rulebook](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/blob/main/docs/annexes/annex-3/annex-3.01-pid-rulebook.md) for a list of attributes.
 
+These are implemented for ISO:
 - `family_name`
 - `given_name`
 - `birth_date`
+- `age_over_12`
+- `age_over_13`
+- `age_over_14`
+- `age_over_16`
 - `age_over_18`
+- `age_over_21`
+- `age_over_25`
+- `age_over_60`
+- `age_over_62`
+- `age_over_65`
+- `age_over_68`
 - `age_in_years`
 - `age_birth_year`
 - `family_name_birth`
 - `given_name_birth`
 - `birth_place`
-- `birth_country`
-- `birth_state`
-- `birth_city`
+- `birth_country` (removed in ARF 1.5.0)
+- `birth_state` (removed in ARF 1.5.0)
+- `birth_city` (removed in ARF 1.5.0)
 - `resident_address`
 - `resident_country`
 - `resident_state`
@@ -131,15 +142,104 @@ See [PID Rule Book](https://github.com/eu-digital-identity-wallet/eudi-doc-archi
 - `resident_postal_code`
 - `resident_street`
 - `resident_house_number`
-- `gender`
+- `sex`
 - `nationality`
 - `issuance_date`
 - `expiry_date`
 - `issuing_authority`
 - `document_number`
-- `administrative_number`
+- `administrative_number` (removed in ARF 1.5.0)
 - `issuing_country`
 - `issuing_jurisdiction`
+- `personal_administrative_number`
+- `portrait`
+- `portrait_capture_date`
+- `email_address`
+- `mobile_phone_number`
+- `trust_anchor`
+- `location_status`
+
+--- 
+
+### [EU PID Credential](https://github.com/a-sit-plus/eu-pid-credential-sdjwt) as SD-JWT
+
+[![Maven Central](https://img.shields.io/maven-central/v/at.asitplus.wallet/eupidcredential-sdjwt)](https://mvnrepository.com/artifact/at.asitplus.wallet/eupidcredential-sdjwt/)
+
+Use data provided by EU Wallets as a SD-JWT credential.
+
+In ARF 1.8.0 the SD-JWT claim names as well as the value for `vct` did change (now it is `urn:eudi:pid:1`), so we decided to create a new credential scheme for VC-K.  
+For the ISO-compliant version as well as SD-JWT prior to ARF 1.8.0 of this credential see the above _EU PID Credential_.
+Be sure to call `at.asitplus.wallet.eupidsdjwt.Initializer.initWithVCK()` first thing in your application.
+
+See [ARF PID Rulebook](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/blob/main/docs/annexes/annex-3/annex-3.01-pid-rulebook.md) for a list of attributes.
+
+These are implemented for SD-JWT:
+- `family_name`
+- `given_name`
+- `birthdate`
+- `age_equal_or_over.12`
+- `age_equal_or_over.13`
+- `age_equal_or_over.14`
+- `age_equal_or_over.16`
+- `age_equal_or_over.18`
+- `age_equal_or_over.21`
+- `age_equal_or_over.25`
+- `age_equal_or_over.60`
+- `age_equal_or_over.62`
+- `age_equal_or_over.65`
+- `age_equal_or_over.68`
+- `age_in_years`
+- `age_birth_year`
+- `birth_family_name`
+- `birth_given_name`
+- `place_of_birth.locality`
+- `place_of_birth.country`
+- `place_of_birth.region`
+- `address.formatted`
+- `address.country`
+- `address.region`
+- `address.locality`
+- `address.postal_code`
+- `address.street_address`
+- `address.house_number`
+- `sex`
+- `nationalities`
+- `date_of_issuance`
+- `date_of_expiry`
+- `issuing_authority`
+- `document_number`
+- `issuing_country`
+- `issuing_jurisdiction`
+- `personal_administrative_number`
+- `picture`
+- `email`
+- `phone_number`
+- `trust_anchor`
+
+---
+
+### [European Health Insurance Card (EHIC)](https://github.com/a-sit-plus/ehic/)
+
+[![Maven Central](https://img.shields.io/maven-central/v/at.asitplus.wallet/ehic)](https://mvnrepository.com/artifact/at.asitplus.wallet/ehic/)
+
+Data classes representing a European Health Insurance Card (EHIC), as a SD-JWT credential.  
+Be sure to call `at.asitplus.wallet.ehic.Initializer.initWithVCK` first thing in your application.
+
+Implemented attributes:
+ - `social_security_number` (String, deprecated)
+ - `personal_administrative_number` (String)
+ - `issuing_country` (String)
+ - `issuing_authority.id` (String)
+ - `issuing_authority.name` (String)
+ - `authentic_source.id` (String)
+ - `authentic_source.name` (String)
+ - `document_number` (String)
+ - `issuance_date` (LocalDate, deprecated)
+ - `date_of_issuance` (LocalDate)
+ - `expiry_date` (LocalDate, deprecated)
+ - `date_of_expiry` (LocalDate)
+ - `starting_date` (LocalDate)
+ - `ending_date` (LocalDate)
 
 ---
 
@@ -179,9 +279,7 @@ Be sure to call `at.asitplus.wallet.healthid.Initializer.initWithVCK` first thin
 
 [![Maven Central](https://img.shields.io/maven-central/v/at.asitplus.wallet/company-registration)](https://mvnrepository.com/artifact/at.asitplus.wallet/company-registration/)
 
-Data classes representing company registrations, as a SD JWT Credential, with the help
-of [VC-K](https://github.com/a-sit-plus/vck).
-
+Data classes representing company registrations, as a SD JWT Credential.  
 Be sure to call `at.asitplus.wallet.companyregistration.Initializer.initWithVCK` first thing in your application.
 
 
@@ -192,9 +290,7 @@ Be sure to call `at.asitplus.wallet.companyregistration.Initializer.initWithVCK`
 
 [![Maven Central](https://img.shields.io/maven-central/v/at.asitplus.wallet/taxid)](https://mvnrepository.com/artifact/at.asitplus.wallet/taxid/)
 
-Data representing tax credentials as SD-JWT, with the help
-of [VC-K](https://github.com/a-sit-plus/vck).
-
+Data representing tax credentials as SD-JWT.  
 Be sure to call `at.asitplus.wallet.taxid.Initializer.initWithVCK` first thing in your application.
 
 <br>
