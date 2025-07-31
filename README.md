@@ -26,13 +26,6 @@ All credentials are subject to the terms and conditions of the Apache Licence, V
 
 ## General Usage
 Simply add the desired dependency to your project and add a one-liner call to the credential Initializer (see individual credentials for details) to register it.  
-As of July 2024, we require one snapshot dependency to support all features. Hence, you must add the following repository to your module's `build.gradle.kts`:
-
-```kotlin
-repositories {
-    maven(uri("https://raw.githubusercontent.com/a-sit-plus/kotlinx.serialization/mvn/repo"))
-}
-```
 
 ## List of Credentials
 
